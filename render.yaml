@@ -3,11 +3,11 @@ services:
     name: voice-assistant
     env: python
     buildCommand: |
-      pip install --upgrade pip setuptools
+      pip install --upgrade pip setuptools wheel
       pip cache purge
-      pip install numpy --no-build-isolation
+      pip install numpy==1.24.3 --no-build-isolation
       pip install -r requirements.txt
     startCommand: gunicorn app:app
     envVars:
       - key: PYTHON_VERSION
-        value: 3.10.13
+        value: 3.13.0
