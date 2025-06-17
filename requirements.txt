@@ -31,4 +31,5 @@ gunicorn==21.2.0 # guicorn
 # Explicit upgrades
 pip>=23.1
 setuptools>=65.0
+wheel>=0.40
 
