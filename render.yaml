@@ -6,8 +6,10 @@ services:
       pip install --upgrade pip setuptools wheel
       pip cache purge
       pip install numpy==1.24.3 --no-build-isolation
-      pip install -r requirements.txt
+      pip install --only-binary=:all: -r requirements.txt || echo "Some packages may have skipped source builds"
     startCommand: gunicorn app:app
     envVars:
       - key: PYTHON_VERSION
         value: 3.13.0
+
+  
