@@ -26,7 +26,7 @@ Werkzeug==3.0.1
 blinker==1.7.0
 typing-extensions>=4.5.0
 colorama>=0.4.6
-gunicorn==21.2.0
+gunicorn==21.2.0 # guicorn
 
 # Explicit upgrades
 pip>=23.1
