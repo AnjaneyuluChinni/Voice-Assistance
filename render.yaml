@@ -3,7 +3,9 @@ services:
     name: voice-assistant
     env: python
     buildCommand: |
-      pip install --upgrade pip setuptools wheel
+      pip install --upgrade pip setuptools
+      pip cache purge
+      pip install numpy --no-build-isolation
       pip install -r requirements.txt
     startCommand: gunicorn app:app
     envVars:
