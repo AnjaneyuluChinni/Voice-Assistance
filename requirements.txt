@@ -1,5 +1,4 @@
 --only-binary=:all:
-python==3.11.7
 flask==3.0.2
 SpeechRecognition==3.10.1
 gTTS==2.5.1
